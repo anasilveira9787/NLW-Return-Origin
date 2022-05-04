@@ -19,3 +19,20 @@ function closeMenu(){
 
 /* EXECUTANDO FUNÇÕES */
 onScroll();
+
+
+ScrollReveal({
+    origin: 'top',
+    distance: '300px',
+    duration: 1000,
+}).reveal(`
+#home, 
+#home img, 
+#home .stats,
+#services,
+#services header,
+#services .card,
+#about,
+#about header,
+#about .content
+`);
