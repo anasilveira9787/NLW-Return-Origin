@@ -1,21 +1,43 @@
+window.addEventListener('scroll', onScroll)
+
+onScroll()
 
 /* CRIANDO FUNÇÕES */
-function onScroll() {  /*  DECLARO A FUNÇÃO QUE VOU CRIAR E O QUE ELA VAI FAZER  */
+function onScroll() { 
+    showNavOnScroll()
+    showBackToTopButtonOnScroll()
+    }
+    
+    
 
-    if(scrollY > 3) {
-        navigation.classList.add('scroll');  // aqui eu chamo a função para o ID setado no HTML 
+
+function showNavOnScroll() {  /*  DECLARO A FUNÇÃO QUE VOU CRIAR E O QUE ELA VAI FAZER  */
+    if(scrollY > 2) {
+        navigation.classList.add('scroll')  // aqui eu chamo a função para o ID setado no HTML 
         } else {
-            navigation.classList.remove('scroll');
+            navigation.classList.remove('scroll')
         }
 }
 
-function openMenu(){
+
+function showBackToTopButtonOnScroll() {  /*  DECLARO A FUNÇÃO QUE VOU CRIAR E O QUE ELA VAI FAZER  */
+    if(scrollY > 550) {
+        backToTopButton.classList.add('show')  // aqui eu chamo a função para o ID setado no HTML 
+        } else {
+            backToTopButton.classList.remove('show')
+        }
+}
+
+function openMenu(){  /*  DECLARO A FUNÇÃO QUE VOU CRIAR E O QUE ELA VAI FAZER  */
     document.body.classList.add('menu-expanded')
 }
 
-function closeMenu(){
+function closeMenu(){   /*  DECLARO A FUNÇÃO QUE VOU CRIAR E O QUE ELA VAI FAZER  */
     document.body.classList.remove('menu-expanded')
 }
+
+
+
 
 /* EXECUTANDO FUNÇÕES */
 onScroll();
