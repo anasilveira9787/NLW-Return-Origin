@@ -12,7 +12,7 @@ function onScroll() {
 
 
 function showNavOnScroll() {  /*  DECLARO A FUNÇÃO QUE VOU CRIAR E O QUE ELA VAI FAZER  */
-    if(scrollY > 2) {
+    if(scrollY > 550) {
         navigation.classList.add('scroll')  // aqui eu chamo a função para o ID setado no HTML 
         } else {
             navigation.classList.remove('scroll')
